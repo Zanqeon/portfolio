@@ -1,0 +1,99 @@
+@keyframes link-hover-animation {
+  0% {
+    left: 0;
+    right: 0;
+  }
+  33% {
+    left: 100%;
+    right: 0;
+  }
+  66% {
+    left: 0;
+    right: 100%;
+  }
+  100% {
+    left: 0;
+    right: 0;
+  }
+}
+
+.container {
+  margin-bottom: 4rem;
+}
+
+.imageContainer {
+  height: 100vh;
+  position: relative;
+}
+
+.photoTitle {
+  @include caseH1;
+
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.image {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.year {
+  @include bodyText;
+
+  font-size: 1.2rem;
+  margin-top: 8rem;
+}
+
+.role {
+  @include bodyText;
+
+  color: $color-text-light;
+  margin-top: 3.2rem;
+}
+
+.title {
+  @include h1;
+
+  font-weight: 500;
+  margin-top: 2.4rem;
+}
+
+.link {
+  @include bodyText;
+
+  margin-top: 3.2rem;
+  display: inline-block;
+  color: $color-text;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0.1rem;
+    background-color: $color-text;
+    transition: .2s ease-in-out;
+  }
+
+  &:hover {
+    &:after {
+      animation: link-hover-animation 0.6s ease-in-out forwards;
+    }
+  }
+}
+
+.description {
+  margin-top: 4rem;
+
+  @include breakpoint(sm) {
+    margin-top: 0;
+  }
+}

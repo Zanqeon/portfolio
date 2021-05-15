@@ -1,0 +1,55 @@
+.container {
+  padding: 1.6rem;
+
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  max-height: 60rem;
+}
+
+.phoneDoubleContainer {
+  @include breakpoint(lg) {
+   padding: 6rem 0;
+ }
+
+  .item {
+    padding: 0 1.6rem;
+
+    @include breakpoint(md) {
+      padding: 0 3rem;
+    }
+  }
+}
+
+.phoneTripleContainer {
+  @include breakpoint(lg) {
+    padding: 6rem 0;
+  }
+
+  .item {
+    padding: 0 0.8rem;
+
+    @include breakpoint(md) {
+      padding: 0 3rem;
+    }
+  }
+}
+
+.desktopContainer {
+  @include breakpoint(lg) {
+    padding: 8rem 0;
+  }
+
+  .list {
+    flex-direction: column;
+
+    @include breakpoint(sm) {
+      flex-direction: row;
+    }
+  }
+}

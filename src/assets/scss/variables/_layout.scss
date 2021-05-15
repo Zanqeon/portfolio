@@ -1,0 +1,38 @@
+$layout-max-container-width: 1440px;
+
+$layout-grid-columns: 12;
+
+$layout-breakpoints: (
+  xs: 0,
+  sm: 768px,
+  md: 1024px,
+  lg: 1440px
+);
+
+$layout-grid-gap: (
+  xs: 16px,
+  sm: 24px,
+  md: 32px,
+  lg: 32px
+);
+
+$layout-grid-offset: (
+  xs: 16px,
+  sm: 32px,
+  md: 40px,
+  lg: 80px
+);
+
+@mixin breakpoint($width, $type: min) {
+  @if map_has_key($layout-breakpoints, $width) {
+    $width: map_get($layout-breakpoints, $width);
+
+    @if $type == max {
+      $width: $width - 1;
+    }
+
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
