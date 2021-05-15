@@ -1,0 +1,28 @@
+.title {
+ @include h2;
+
+  margin-top: 2.4rem;
+
+  @include breakpoint(md){
+    margin-top: 0;
+  }
+}
+
+.stepNumber {
+  @include h2;
+
+  color: $color-text-lightest;
+  letter-spacing: -0.02rem;
+
+  &::after {
+    content: '.';
+  }
+}
+
+.description {
+  margin-top: 2.4rem;
+
+  @include breakpoint(md){
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,16 @@
+.container {
+  height: 10rem;
+  margin: 2rem 0;
+  background-color: lightcoral;
+  border: 0.2rem solid firebrick;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.description {
+  @include bodyText;
+
+  color: darkRed;
+  text-transform: uppercase;
+}

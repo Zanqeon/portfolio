@@ -1,0 +1,14 @@
+.container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  @include breakpoint(sm) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  @include breakpoint(lg) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
