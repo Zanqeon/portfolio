@@ -4,9 +4,13 @@
   "author": "Tim Huijg <tim_huijg@hotmail.com>",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "watch":  "next dev -p 3300"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:Zanqeon/portfolio.git"
   },
   "dependencies": {
     "axios": "^0.21.1",
