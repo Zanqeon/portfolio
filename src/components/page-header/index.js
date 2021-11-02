@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import styles from './index.module.scss'
 import RichText from 'components/rich-text'
 import Layout from 'components/layout'
@@ -22,11 +22,14 @@ export default function PageHeader ({
 
   return (
     <div className={styles.container}>
-      {image && (
+      {image && height && (
         <div className={styles.imageContainer}>
           <h1 className={styles.photoTitle}>{title}</h1>
           <img className={styles.image} src={transformedSrc} />
         </div>
+      )}
+      {(!height) && (
+        <div style={{height: '100vh'}} />
       )}
       <Layout.Container>
         <Layout.Row>

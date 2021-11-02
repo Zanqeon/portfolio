@@ -7,7 +7,6 @@ export default function Index(props) {
   const story = useStoryblok(props.story)
   const content = mapPage(story)
 
-
   return (
     <div>
       <Head {...content.meta} />

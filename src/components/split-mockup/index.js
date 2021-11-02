@@ -14,14 +14,18 @@ export default function SplitMockup ({
       <Section>
         <Layout.Container>
           <ul className={styles.list}>
-            <li className={styles.smallImageItem}>
-              <div className={styles.smallImageContainer} style={{ backgroundColor: backgroundColor }}>
-                <img src={smallImage.src} alt={smallImage.alt} className={styles.smallImage}/>
-              </div>
-            </li>
-            <li className={styles.largeImageItem} style={{ backgroundColor: backgroundColor }}>
-              <img src={largeImage.src} alt={largeImage.alt} className={styles.largeImage}/>
-            </li>
+            {smallImage && (
+              <li className={styles.smallImageItem}>
+                <div className={styles.smallImageContainer} style={{ backgroundColor: backgroundColor }}>
+                  <img src={smallImage?.src} alt={smallImage.alt} className={styles.smallImage}/>
+                </div>
+              </li>
+            )}
+            {largeImage && (
+              <li className={styles.largeImageItem} style={{ backgroundColor: backgroundColor }}>
+                <img src={largeImage?.src} alt={largeImage.alt} className={styles.largeImage}/>
+              </li>
+            )}
           </ul>
         </Layout.Container>
       </Section>
