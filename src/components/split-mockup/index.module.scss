@@ -11,10 +11,6 @@
   }
 }
 
-.item {
-
-}
-
 .smallImageItem {
   display: none;
 
@@ -49,6 +45,26 @@
   }
 }
 
+.desktopImageWrapper {
+  padding: 4.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .largeImage {
+    max-height: 90%;
+    border-radius: 0.5rem;
+    box-shadow: $shadow;
+    height: 100%;
+    width: auto;
+    object-fit: initial;
+
+    @include breakpoint(lg) {
+      max-height: 88%;
+    }
+  }
+}
+
 .largeImage {
   width: 100%;
   height: 100%;
@@ -61,3 +77,35 @@
   height: 100%;
 }
 
+.mobileItem {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  padding: 1.6rem 0 0.4rem;
+  align-items: center;
+
+  @include breakpoint(md) {
+    display: none;
+  }
+}
+
+.mobileItemImageWrapper {
+  width: 30%;
+  position: relative;
+  left: 9%;
+}
+
+.mobileItemRightImage {
+  position: relative;
+  left: 18%;
+  width: 83%;
+  padding-bottom: 1rem;
+}
+
+.desktopItem {
+  display: none;
+
+  @include breakpoint(md) {
+    display: flex;
+  }
+}
