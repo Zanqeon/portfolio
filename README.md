@@ -29,7 +29,7 @@ Image naming convention: ```{case}-{mockupType}-{number}.webp```
 
 | Phone | Steps |
 | ----------- | ----------- | 
-| <img src="https://a.storyblok.com/f/113654/450x910/a41184c904/atida-mobile-3.webp" height="200" width="175" max-width="100%" /> | <ol> <li> Inspect site on 375px and take screen capture.</li><li>Create mockup in figma with Apple Iphone X Space Grey and the screen capture.</li><li>Export **1.5x** .PNG from figma.</li><li>Convert the PNG file to .WEBP with a <a href="https://image.online-convert.com/convert-to-webp">file converter</a>.</li></ol> |
+| <img src="https://a.storyblok.com/f/113654/450x910/a41184c904/atida-mobile-3.webp" height="200" width="175" max-width="100%" /> | <ol> <li> Inspect site on 375px and take screen capture.</li><li>Create mockup in figma with Apple Iphone X Space Grey and the screen capture (1000 x 2000 px).</li><li>Export **1.0x** .PNG from figma.</li><li>Convert the PNG file to .WEBP with a <a href="https://image.online-convert.com/convert-to-webp">file converter</a>.</li></ol> |
 
 | Desktop | Steps |
 | ----------- | ----------- | 

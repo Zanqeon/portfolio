@@ -4,6 +4,6 @@ export default function mapMockup (data) {
   return {
     backgroundColor: data?.backgroundColor?.color,
     images: data?.images?.map(image => (mapImage(image))),
-    type: data?.type[0]
+    type: data?.type
   }
 }
