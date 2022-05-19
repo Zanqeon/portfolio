@@ -15,7 +15,7 @@ export default function SplitMockup ({
     <SbEditable content={{ backgroundColor, smallImage, largeImage }}>
       <Section>
         <Layout.Container>
-            {largeImageType === 'mobile' && (
+            {largeImageType === 'multi-phone' && (
               <ul className={styles.list}>
                 {smallImage && (
                   <li className={styles.smallImageItem}>
@@ -33,6 +33,7 @@ export default function SplitMockup ({
             )}
             {largeImageType === 'desktop' && (
               <>
+                {/* This <ul> only shows when viewing the component on a mobile screen */}
                 <ul className={styles.mobileItem} style={{ backgroundColor: backgroundColor }}>
                   {smallImage && (
                     <li className={styles.mobileItemImageWrapper}>
@@ -45,6 +46,7 @@ export default function SplitMockup ({
                     </li>
                   )}
                 </ul>
+                {/* This <ul> only shows when viewing the component on a desktop screen */}
                 <ul className={styles.desktopItem}>
                   {smallImage && (
                     <li className={styles.smallImageItem}>
